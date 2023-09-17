@@ -1,6 +1,10 @@
 /* Google font */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --nav-height: 50px
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,13 +13,24 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --nav-height: 50px
+.btn > a {
+    border: 2px solid #1f1f1f;
+    min-width: 95px;
+    display: inline-block;
+    border-radius: 6px;
+    padding: 4px 10px;
+    text-decoration: none;
+    color: #1f1f1f;
+    background-color: #F8F9FD;
+    box-shadow: 2px 2px #3645FF;
+    text-align: center;
 }
 
-
+#main {
+    background: url(../img/background/back1.jpg) center / cover no-repeat;
+}
+/* Begin: Header */
 #header {
-    border: 1px solid #ccc;
     height: var(--nav-height);
     width: 100%;
     padding: 0 100px;
@@ -26,7 +41,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 15px;
+    font-size: 16px;
+    background-color: #1f1f1f;
+    color: #FFFFFF;
+    z-index: 100;
 }  
 
 #navbar > li {
@@ -37,49 +55,276 @@
     padding: 0 10px;
     text-transform: uppercase;
     text-decoration: none;
+    color: #FFFFFF;
 }
 
 #navbar li .contact {
     padding-right: 0;
 }
+/* End: Header */
 
+/* Begin: Banner */
 #banner {
-    border: 1px solid black;
     margin-top: var(--nav-height);
     width: 100%;
-    padding: 50px 100px;
+    padding: 60px 80px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 #banner .banner-container {
-    border: 1px solid;
-    width: 100%;
-    height: 300px;
     display: flex;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px 20px;
+    align-items: center;
+    border-radius: 0 200px 200px 0;
+    color: #1f1f1f;
 }
 
-#banner .bio {
-    border: 1px solid;
+/* Biography container */
+#banner .bio-container {
     flex: 1;
     display: flex;
     flex-direction: column;
+    padding: 0px 60px 0 0;
+    margin: 0 60px;
+    color: #F8F9FD;
+    border-right: 2px solid #F8F9FD;
 }
 
-#banner .profile {
-    border: 1px solid;
+#banner .bio-title {
+    text-transform: uppercase;
+}
+
+#banner .bio-title::first-letter {
+    font-size: 80px;
+    color: #3645FF;
+    text-shadow: 8px -8px #F8F9FD;
+}
+
+#banner .bio-container .btn {
+    padding: 20px 0;
+}
+
+.bio-container .btn > a {
+    border: 1px solid white;
+    box-shadow: none;
+    color: #F8F9FD;
+    background-color: #3645FF;
+}
+
+.btn a:hover {
+    background-color: transparent;
+    color: #F8F9FD;
+}
+
+/* Image container */
+#banner .profile-container {
+    background-color: transparent;
     width: 300px;
-    height: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#banner .profile-container::before {
+    content: '';
+    position: absolute;
+    background: url(../img/logo/logo.png) center / contain;
+    border-radius: 50%;
+    border: 2px solid #F8F9FD;
+    width: 100px;
+    height: 100px;
+    bottom: 4px;
+    z-index: 1;
 }
 
 #banner img {
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid #F8F9FD;
+}
+
+#banner .banner-container p {
+    text-align: justify;
+    line-height: 1.8;
+}
+/* End: Banner */
+
+/* Begin: Section 1 */
+#section-one {
+    border: 1px solid black;
+    background-color: #F8F9FD;
+    width: 100%;
+    padding: 60px 150px;
+}
+
+#about {
+    display: flex;
+    justify-content: center;
+    box-shadow: 15px 15px #3645FF;
+}
+
+#about .info {
+    border-top: 2px solid #1f1f1f;
+    border-bottom: 2px solid #1f1f1f;
+    border-left: 2px solid #1f1f1f;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about .info > h2 {
+    /* border: 1px solid red; */
+    text-align: center;
+    font-size: 30px;
+    text-transform: uppercase;
+    padding: 20px 0 10px 0;
+}
+
+#about .info > p {
+    border-top: 2px solid #1f1f1f;
+    text-align: justify;
+    line-height: 1.6;
+    margin-top: 10px;
+    padding-top: 30px;
+}
+
+#about .info > .school-logo {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+}
+
+.info .school-logo > img {
+    border-radius: 50%;
     width: 100%;
     height: 100%;
 }
 
-.banner-container p {
-    text-align: justify; /* Align the left/right edge of text box to be equal */
+#about .entertainment {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #1f1f1f;
+}
+
+.entertainment .hobby {
+    border-bottom: 2px solid #1f1f1f;
+}
+
+.entertainment .hobby,
+.entertainment .movie-music {
+    padding: 20px;
+    min-width: 400px;
+}
+
+.hobby > h3,
+.movie-music > h3 {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.hobby ul,
+.movie-music ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hobby ul > Li,
+.movie-music ul > li {
+    padding: 10px 10px;
+    margin: 10px;
+    list-style: none;
+}
+/* End: Section 1 */
+
+/* Begin: Section 2 */
+#section-two {
+    width: 100%;
+    border: 1px solid blue;
+    padding: 40px 80px;
+
+}
+#quote {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 30px 100px;
+    color: #F8F9FD;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#quote .quotation {
+    line-height: 1.8;
+    font-style: italic;
+    text-align: justify;
+}
+
+#quote .author {
+    text-align: right;
+    font-size: 14px;
+}
+/* End: Section 2 */
+
+/* Begin: Table */
+#section-three {
+    border: 1px solid red;
+    width: 100%;
+    background-color: #F8F9FD;
+    padding: 40px 80px;
+
+}
+
+#section-three #project {
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    padding: 10px;
+
+}
+
+.table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+.table tr > th {
+    text-transform: uppercase;
+}
+
+.table td > a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+#project #education {
+    border: 1px solid black;
+    padding: 30px;
 }
 
 
+
+/* End: Table */
+
+
+
+
+
+
+
+/* Footer */
+#footer {
+    width: 100%;
+    padding: 10px;
+    background-color: #1f1f1f;
+    color: #F8F9FD;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 200;
+}
