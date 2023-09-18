@@ -2,7 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --nav-height: 50px
+    --nav-height: 50px;
+    --color-white: #F8FDFD;
+    --color-black: #1f1f1f;
+    --color-blue: #3645ff;
 }
 
 * {
@@ -26,7 +29,7 @@
     text-align: center;
 }
 
-#main {
+body {
     background: url(../img/background/back1.jpg) center / cover no-repeat;
 }
 /* Begin: Header */
@@ -47,6 +50,10 @@
     z-index: 100;
 }  
 
+#header .logo i {
+    font-size: 30px;
+}
+
 #navbar > li {
     display: inline-block;
 }
@@ -56,6 +63,10 @@
     text-transform: uppercase;
     text-decoration: none;
     color: #FFFFFF;
+}
+
+#navbar li:hover > a {
+    color: #3645FF;
 }
 
 #navbar li .contact {
@@ -75,7 +86,7 @@
 
 #banner .banner-container {
     display: flex;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px 20px;
     align-items: center;
     border-radius: 0 200px 200px 0;
@@ -123,7 +134,7 @@
 #banner .profile-container {
     background-color: transparent;
     width: 300px;
-    height: 300px;
+    height: 350px;
     position: relative;
 }
 
@@ -140,7 +151,7 @@
 }
 
 #banner img {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100%;
     border-radius: 50%;
@@ -149,22 +160,22 @@
 
 #banner .banner-container p {
     text-align: justify;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 /* End: Banner */
 
 /* Begin: Section 1 */
 #section-one {
-    border: 1px solid black;
-    background-color: #F8F9FD;
     width: 100%;
-    padding: 60px 150px;
+    padding: 70px 140px;
+    box-shadow: 0px 0px 16px 4px #1f1f1f
 }
 
 #about {
     display: flex;
     justify-content: center;
-    box-shadow: 15px 15px #3645FF;
+    box-shadow: 25px 25px 0px -10px #3645FF, -25px -25px 0px -10px rgba(0, 0, 0, 0.7);
+    background-color: #F8F9FD;
 }
 
 #about .info {
@@ -187,6 +198,7 @@
 
 #about .info > p {
     border-top: 2px solid #1f1f1f;
+    word-spacing: -1px;
     text-align: justify;
     line-height: 1.6;
     margin-top: 10px;
@@ -196,10 +208,11 @@
 #about .info > .school-logo {
     width: 60px;
     height: 60px;
-    margin-top: 30px;
+    margin: 20px 0px;
 }
 
 .info .school-logo > img {
+    border: 2px solid #1f1f1f;
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -218,7 +231,7 @@
 .entertainment .hobby,
 .entertainment .movie-music {
     padding: 20px;
-    min-width: 400px;
+    min-width: 350px;
 }
 
 .hobby > h3,
@@ -240,18 +253,23 @@
     margin: 10px;
     list-style: none;
 }
+
+.entertainment .btn:hover > a {
+    background-color: #3645FF;
+    box-shadow: 2px 2px #F8F9FD;
+}
+
 /* End: Section 1 */
 
 /* Begin: Section 2 */
 #section-two {
     width: 100%;
-    border: 1px solid blue;
     padding: 40px 80px;
 
 }
 #quote {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 30px 100px;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 30px 80px;
     color: #F8F9FD;
     font-size: 20px;
     font-weight: 200;
@@ -265,33 +283,37 @@
 
 #quote .author {
     text-align: right;
-    font-size: 14px;
+    font-size: 16px;
 }
 /* End: Section 2 */
 
 /* Begin: Table */
 #section-three {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
-    background-color: #F8F9FD;
-    padding: 40px 80px;
-
+    padding: 40px 100px;
+    box-shadow: 0px 0px 16px 4px #1f1f1f;
 }
 
 #section-three #project {
-    border: 1px solid black;
     display: flex;
     justify-content: space-between;
-    font-size: 12px;
     padding: 10px;
-
 }
 
-.table, th, td {
+.table {
+    width: 100%;
+    font-size: 16px;
+    border: 2px solid #1f1f1f;
+    background-color: #F8F9FD;
+    border-collapse: collapse;
+    box-shadow: -25px 25px 0px -10px rgba(0, 0, 0, 0.7);
+}
+
+th, td {
     border: 1px solid black;
     text-align: center;
-    border-collapse: collapse;
-    padding: 5px;
+    padding: 10px;
 }
 
 .table tr > th {
@@ -303,20 +325,89 @@
     color: #1f1f1f;
 }
 
-#project #education {
-    border: 1px solid black;
-    padding: 30px;
+.table .table-title {
+    background-color: #1f1f1f;
+    color: #F8F9FD;
 }
 
-
+.table .even {
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
 /* End: Table */
+#project #education {
+    border: 1px solid black;
+    background-color: #F8F9FD;
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 25px -25px 0px -10px rgba(0, 0, 0, 0.7);
+}
 
+#education .program-language,
+#education .job {
+    border: 1px solid black;
+}
 
+#education .program-language {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+}
 
+.program-language > h3,
+.job > h3 {
+    font-size: 16px;
+}
 
+.program-language > ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
 
+}
 
+.program-language ul > li {
+    list-style: none;
+    margin: 10px;
+}
+
+.program-language .btn > a {
+    box-shadow: 2px 2px #1f1f1f;
+    font-size: 12px;
+}
+
+.program-language .btn:hover > a {
+    box-shadow: 2px 2px#3645FF;
+    color: #3645FF;
+}
+
+#education .job {
+    height: 100%;
+    padding: 10px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.job > h3 {
+    margin: 10px;
+}
+
+.job li > ol {
+    list-style: lower-roman;
+}
+
+.job .school-list,
+.school-list ul,
+.job .job-list,
+.job-list ol {
+    margin: 0px 0 0 50px ;
+    line-height: 1.6;
+    font-size: 14px;
+}
 
 /* Footer */
 #footer {
