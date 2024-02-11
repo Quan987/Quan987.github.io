@@ -5,7 +5,7 @@
     --nav-height: 50px;
     --color-white: #F8FDFD;
     --color-black: #1f1f1f;
-    --color-blue: #3645ff;
+    --color-blue: #0033CF;
 }
 
 * {
@@ -17,15 +17,15 @@
 }
 
 .btn > a {
-    border: 2px solid #1f1f1f;
+    border: 2px solid var(--color-black);
     min-width: 95px;
     display: inline-block;
     border-radius: 6px;
     padding: 4px 10px;
     text-decoration: none;
-    color: #1f1f1f;
-    background-color: #F8F9FD;
-    box-shadow: 2px 2px #3645FF;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    box-shadow: 2px 2px var(--color-blue);
     text-align: center;
 }
 
@@ -45,7 +45,7 @@ body {
     justify-content: space-between;
     align-items: center;
     font-size: 16px;
-    background-color: #1f1f1f;
+    background-color: var(--color-black);
     color: #FFFFFF;
     z-index: 100;
 }  
@@ -66,7 +66,7 @@ body {
 }
 
 #navbar li:hover > a {
-    color: #3645FF;
+    color: var(--color-blue);
 }
 
 #navbar li .contact {
@@ -90,7 +90,7 @@ body {
     padding: 20px 20px;
     align-items: center;
     border-radius: 0 200px 200px 0;
-    color: #1f1f1f;
+    color: var(--color-black);
 }
 
 /* Biography container */
@@ -100,8 +100,8 @@ body {
     flex-direction: column;
     padding: 0px 60px 0 0;
     margin: 0 60px;
-    color: #F8F9FD;
-    border-right: 2px solid #F8F9FD;
+    color: var(--color-white);
+    border-right: 2px solid var(--color-white);
 }
 
 #banner .bio-title {
@@ -110,8 +110,8 @@ body {
 
 #banner .bio-title::first-letter {
     font-size: 80px;
-    color: #3645FF;
-    text-shadow: 8px -8px #F8F9FD;
+    color: var(--color-blue);
+    text-shadow: 8px -8px var(--color-white);
 }
 
 #banner .bio-container .btn {
@@ -121,13 +121,13 @@ body {
 .bio-container .btn > a {
     border: 1px solid white;
     box-shadow: none;
-    color: #F8F9FD;
-    background-color: #3645FF;
+    color: var(--color-white);
+    background-color: var(--color-blue);
 }
 
 .btn a:hover {
     background-color: transparent;
-    color: #F8F9FD;
+    color: var(--color-white);
 }
 
 /* Image container */
@@ -144,7 +144,7 @@ body {
     position: absolute;
     background: url(../img/logo/logo.png) center / contain;
     border-radius: 50%;
-    border: 2px solid #F8F9FD;
+    border: 2px solid var(--color-white);
     width: 100px;
     height: 100px;
     bottom: 4px;
@@ -153,10 +153,10 @@ body {
 
 #banner img {
     background-color: rgba(0, 0, 0, 0.6);
-    width: 90%;
-    height: 100%;
+    width: 85%;
+    height: 95%;
     border-radius: 50%;
-    border: 2px solid #F8F9FD;
+    border: 2px solid var(--color-white);
 }
 
 #banner .banner-container p {
@@ -169,20 +169,20 @@ body {
 #section-one {
     width: 100%;
     padding: 70px 140px;
-    box-shadow: 0px 0px 16px 4px #1f1f1f
+    box-shadow: 0px 0px 16px 4px var(--color-black)
 }
 
 #about {
     display: flex;
     justify-content: center;
-    box-shadow: 25px 25px 0px -10px #3645FF, -25px -25px 0px -10px rgba(0, 0, 0, 0.7);
-    background-color: #F8F9FD;
+    box-shadow: 25px 25px 0px -10px var(--color-blue), -25px -25px 0px -10px rgba(0, 0, 0, 0.7);
+    background-color: var(--color-white);
 }
 
 #about .info {
-    border-top: 2px solid #1f1f1f;
-    border-bottom: 2px solid #1f1f1f;
-    border-left: 2px solid #1f1f1f;
+    border-top: 2px solid var(--color-black);
+    border-bottom: 2px solid var(--color-black);
+    border-left: 2px solid var(--color-black);
     padding: 20px 60px;
     display: flex;
     flex-direction: column;
@@ -198,7 +198,7 @@ body {
 }
 
 #about .info > p {
-    border-top: 2px solid #1f1f1f;
+    border-top: 2px solid var(--color-black);
     word-spacing: -1px;
     text-align: justify;
     line-height: 1.6;
@@ -213,7 +213,7 @@ body {
 }
 
 .info .school-logo > img {
-    border: 2px solid #1f1f1f;
+    border: 2px solid var(--color-black);
     border-radius: 50%;
     width: 100%;
     height: 100%;
@@ -222,11 +222,11 @@ body {
 #about .entertainment {
     display: flex;
     flex-direction: column;
-    border: 2px solid #1f1f1f;
+    border: 2px solid var(--color-black);
 }
 
 .entertainment .hobby {
-    border-bottom: 2px solid #1f1f1f;
+    border-bottom: 2px solid var(--color-black);
 }
 
 .entertainment .hobby,
@@ -256,8 +256,8 @@ body {
 }
 
 .entertainment .btn:hover > a {
-    background-color: #3645FF;
-    box-shadow: 2px 2px #F8F9FD;
+    background-color: var(--color-blue);
+    box-shadow: 2px 2px var(--color-white);
 }
 
 /* End: Section 1 */
@@ -271,7 +271,7 @@ body {
 #quote {
     background-color: rgba(0, 0, 0, 0.7);
     padding: 30px 80px;
-    color: #F8F9FD;
+    color: var(--color-white);
     font-size: 20px;
     font-weight: 200;
 }
@@ -293,7 +293,7 @@ body {
     /* border: 1px solid red; */
     width: 100%;
     padding: 40px 100px;
-    box-shadow: 0px 0px 16px 4px #1f1f1f;
+    box-shadow: 0px 0px 16px 4px var(--color-black);
 }
 
 #section-three #project {
@@ -305,8 +305,8 @@ body {
 .table {
     width: 100%;
     font-size: 16px;
-    border: 2px solid #1f1f1f;
-    background-color: #F8F9FD;
+    border: 2px solid var(--color-black);
+    background-color: var(--color-white);
     border-collapse: collapse;
     box-shadow: -25px 25px 0px -10px rgba(0, 0, 0, 0.7);
 }
@@ -323,22 +323,32 @@ th, td {
 
 .table td > a {
     text-decoration: none;
-    color: #1f1f1f;
+    color: var(--color-black);
+    
 }
 
 .table .table-title {
-    background-color: #3645FF;
-    color: #F8F9FD;
+    background-color: var(--color-blue);
+    color: var(--color-white);
 }
 
 .table .even {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
+.table-highlight:hover {
+    background-color: var(--color-blue);
+}
+
+.table-highlight:hover > a {
+    color: var(--color-white);
+}
+
+
 /* End: Table */
 #project #education {
-    border: 1px solid black;
-    background-color: #F8F9FD;
+    border: 1px solid var(--color-black);
+    background-color: var(--color-white);
     margin-left: 30px;
     display: flex;
     flex-direction: column;
@@ -347,7 +357,7 @@ th, td {
 
 #education .program-language,
 #education .job {
-    border: 1px solid black;
+    border: 1px solid var(--color-black);
 }
 
 #education .program-language {
@@ -376,13 +386,13 @@ th, td {
 }
 
 .program-language .btn > a {
-    box-shadow: 2px 2px #1f1f1f;
+    box-shadow: 2px 2px var(--color-black);
     font-size: 12px;
 }
 
 .program-language .btn:hover > a {
-    box-shadow: 2px 2px#3645FF;
-    color: #3645FF;
+    box-shadow: 2px 2pxvar(--color-blue);
+    color: var(--color-blue);
 }
 
 #education .job {
@@ -414,8 +424,8 @@ th, td {
 #footer {
     width: 100%;
     padding: 10px;
-    background-color: #1f1f1f;
-    color: #F8F9FD;
+    background-color: var(--color-black);
+    color: var(--color-white);
     text-align: center;
     font-size: 12px;
     font-weight: 200;
